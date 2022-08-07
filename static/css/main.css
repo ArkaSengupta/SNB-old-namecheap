@@ -1,0 +1,23 @@
+.tales {
+  width: 100%;
+}
+.carousel-inner{
+  width:100%;
+  max-height: 600px !important;
+}
+
+.carousel-caption {
+  margin-bottom: 200px;
+}
+
+/* .bg-transgrey{
+    background-color: rgba(50,50,50,0.5);
+} */
+
+.mainlogo{
+  height: 50px;
+  border-radius: 10%;
+  border: 3px;
+  border-width: 3px;
+  display: inline-block;
+}

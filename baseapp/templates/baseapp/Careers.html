@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block defaulttitle %}
+{% endblock defaulttitle %}
+
+{% block default %}
+
+<div class="row">
+	<div class="col-12">
+		<div class="card card-body">
+			{% if error %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endif %}
+			<div class="text-center">
+				<h3>Apply Here</h3>
+				<p>We nurture and cultivate a sense pride in the work and create team leaders. Your growth chart will be governed by well-defined transparent policies of the firm. Apply via the form given below and meet us for face to face interview.</p>
+			</div>
+			<form name ="form" enctype="multipart/form-data" action="" method="POST">
+				{% csrf_token %}
+				<div class="input-group mb-3">
+						<div class="input-group-append">
+							<span class="input-group-text">First Name</span>
+						</div>
+						<input type="text" name="First_Name" placeholder="First Name..." class="form-control">
+				</div>
+				<div class="input-group mb-3">
+						<div class="input-group-append">
+							<span class="input-group-text">Last Name</span>
+						</div>
+						<input type="text" name="Last_Name" placeholder="Last Name..." class="form-control">
+				</div>
+				<div class="input-group mb-3">
+						<div class="input-group-append">
+							<span class="input-group-text">Email</span>
+						</div>
+						<input type="email" name="Email" placeholder="Email..." class="form-control">
+				</div>
+				<div class="input-group mb-3">
+						<div class="input-group-append">
+							<span class="input-group-text">Mobile No.</span>
+						</div>
+						<input type="text" name="Mobile" placeholder="Mobile No..." class="form-control">
+				</div>
+				<div class="input-group mb-3">
+						<div class="input-group-append">
+							<span class="input-group-text">Gender</span>
+						</div>
+						{{form.Gender}}
+				</div>
+				<div class="input-group mb-3">
+						<div class="input-group-append">
+							<span class="input-group-text">Postion</span>
+						</div>
+						<input type="text" name="Postion" placeholder="Postion You Are Applying For..." class="form-control">
+				</div>
+				<div class="input-group mb-3">
+						<div class="input-group-append">
+							<span class="input-group-text">Date Of Birth</span>
+						</div>
+						{{form.DOB}}
+				</div>
+				<div class="input-group mb-3">
+						<div class="input-group-append">
+							<span class="input-group-text">Highest Qualification</span>
+						</div>
+						<input type="text" name="Qualification" placeholder="Qualification..." class="form-control">
+				</div>
+				<div class="input-group mb-3">
+						<div class="input-group-append">
+							<span class="input-group-text">Portfolio Website</span>
+						</div>
+						<input type="text" name="Portfolio_Website" placeholder="https://..." class="form-control">
+				</div>
+				<div class="input-group mb-3">
+						<div class="input-group-append">
+							<span class="input-group-text">Experience</span>
+						</div>
+						<input type="text" name="Experience" placeholder="Years Of Experience..." class="form-control">
+				</div>
+				<div class="input-group mb-3">
+						<div class="input-group-append">
+							<span class="input-group-text">Upload Résumé</span>
+						</div>
+						<div class="form-control" placeholder="Please input pdf or jpg files...">{{form.Resume}}</div>
+				</div>
+				<div class="input-group mb-3">
+						<div class="input-group-append">
+							<span class="input-group-text">Reference / Comments / Questions</span>
+						</div>
+						<textarea class="form-control" name="RCQ" placeholder="Enter Reference / Comments / Questions Here..." rows="3" ></textarea>
+				</div>
+				<input class= "btn btn-outline-dark" type="submit" name="Submit">
+			</form>
+
+		</div>
+	</div>
+</div>
+
+{% endblock default %}

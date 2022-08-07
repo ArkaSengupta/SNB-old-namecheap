@@ -1,0 +1,43 @@
+{% load static %}
+
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-interval="10000">
+      <img src="{% static 'images/carousel1.jpg' %}"  class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block ">
+        <img class="w-25" src="{% static 'images/ca-logo3.png' %}" alt="">
+        <h3 class="text-uppercase">S N Banerjea & Co.</h3>
+        <h5>Chartered Accountants</h5>
+      </div>
+    </div>
+    <div class="carousel-item" data-interval="10000">
+      <img src="{% static 'images/carousel2.jpg' %}"  class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Audit & Assurance</h5>
+        <p>Our Assurance practice provides high quality, independent audit services that transcends beyond conventional financial reporting ...</p>
+        <a href="{% url 'audit_assurance' %}" class="btn btn-outline-secondary">Know More</a>
+      </div>
+    </div>
+    <div class="carousel-item" data-interval="10000">
+      <img src="{% static 'images/carousel3.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block bg-gradient-dark">
+        <h5>Risk Advisory</h5>
+        <p>Risks and uncertainties take various shapes and sizes and have multifarious impacts ...</p>
+        <a href="{% url 'risk_advisory' %}" class="btn btn-outline-secondary">Know More</a>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
